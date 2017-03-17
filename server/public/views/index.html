@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practice Inventory</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="vendors/jquery.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+  </head>
+  <body>
+  <div id='wrapper'>
+    <div class='addItems'>
+      <h3>Add Items</h3>
+      <input type='text' placeholder='name' id='nameInAdd' />
+      <br>
+      <input type='text' placeholder='description' id='descriptionInAdd' />
+      <br>
+      <button id='addItemButton'>Add Item</button>
+      <button id='clearAddButton'>Clear Add</button>
+    </div>
+
+    <div class='searchItems'>
+      <h3>Search Items</h3>
+      <input type='text' placeholder='name' id='nameInSearch' />
+      <button id='searchNameButton'>Search Name</button>
+      <br>
+      <input type='text' placeholder='description' id='descriptionInSearch' />
+      <button id='searchDescriptionButton'>Search Description</button>
+      <br>
+      <button id='clearSearchButton'>Clear Search</button>
+    </div>
+
+    <h3>Output</h3>
+    <div class='output'></div>
+  </div>
+  </body>
+</html>
+
+<!-- Server Side Inventory
+in-class: 3-16-2017
+
+Overview: In this project we'll create a project that tracks an inventory on the server. Also, we'll explore Express routing through custom modules.
+
+The project will allow users to view items in the inventory, add items to the inventory, and search for items. Inventory items will be objects that are held in a server side array.
+
+For each of the user verbs (view, add, search) we'll create a route that we will hit via AJAX as follows:
+
+view: GET, returns the full array of inventory
+add: POST, receives a new object, adds it to the existing inventory
+search: POST, receives a string that we'll check against existing objects in the inventory & returns an array of matches
+We will create an "inventory" router for these. We will also create an "index" router for the main view (index.html).
+
+Tech:
+
+JQuery
+Node
+Express
+AJAX
+
+Steps:
+[ x ] spin up Node/Express server
+
+[ x ] send back index.html via app.js with sourced js files
+
+[ x ] refactor app.js to use an 'index.js' Express router module for index.html
+
+[ x ] setup basic interface
+
+[ x ] test JQ interactive elements
+
+[ x ] setup 'inventory.js' with temp inventory array and GET route to return said array
+
+[ x  ] GET AJAX call to inventory returns array
+
+[  ] POST AJAX call to inventory adds new item to array on the server
+
+[ ] display inventory on DOM
+
+[ ] POST AJAX call to check if any objects' names contain the given search string & return appropriate array
+
+Stretch Goals:
+[ ] clear appropriate input(s) on successful add
+
+[ ] clear appropriate search input(s) on search completion
+
+[ ] add search functionality for description
+
+[ ] display "no matches" if empty array is returned for a search
+
+[ ] "remove" button for each item
+
+[ ] "remove" route for inventory controller
+
+[ ] search functionality for both name and description -->
